@@ -23,7 +23,7 @@ pipeline {
           }
         }
         
-       stage('Deliver') {
+       stage('Development') {
            steps {
                echo "Deliver started to Dev Env"
                input message: 'Finished using the web site? (Click "Proceed" to continue)' 

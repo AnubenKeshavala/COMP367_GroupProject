@@ -28,6 +28,18 @@ pipeline {
                echo "Deliver started to Dev Env"
                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
            }
+           
+           steps {
+               echo "Deliver started to QAT Env"
+           }
+           steps {
+               echo "Deploy to Staging Env"
+           }
+           steps {
+               echo "Deploy to Production Env"
+               input message: 'Finished production stage of web site? (Click "Proceed" to continue)' 
+           }
         }
+        
     }
 }
